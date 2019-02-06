@@ -52,7 +52,8 @@ When a user wants to view a file's current 'summary', they must provide the file
 
 > ### Schema
 
-For the database, you will be given an explanation of the schema and are expected to take notes on this and create a schema which matches the model you implement when creating your `Entity` classes and context.
+For the database, you will be given an explanation of the schema and are expected to take notes on this and create a schema which matches the model you implement when creating you `Entity` classes and context.
+
 ---
 
 ## Provided Skeleton
