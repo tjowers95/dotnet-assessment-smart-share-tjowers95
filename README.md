@@ -50,6 +50,9 @@ If a file is expired or the maximum downloads have been reached, the file entry 
 
 When a user wants to view a file's current 'summary', they must provide the file name and a correct password. They should then be shown the time created, remaining downloads and time until expiration.
 
+> ### Schema
+
+For the database, you will be given an explanation of the schema and are expected to take notes on this and create a schema which matches the model you implement when creating your `Entity` classes and context.
 ---
 
 ## Provided Skeleton
@@ -58,7 +61,6 @@ When a user wants to view a file's current 'summary', they must provide the file
 
 The skeleton contains a basic boilerplate showcasing some of the basic features of CommandLineParser. You are given a skeleton that provides a working command-line interface which has pre-written 'download' and 'upload' commands and their arguments and responds by printing verification messages to the console. One of the features that it utilizes is  [**verbs**](https://github.com/commandlineparser/commandline/wiki/Verbs). This enables the ability to delineate and separate options and values for multiple commands within a single application. The skeleton also contains an incomplete `Api` class in the `Api` directory and an empty `SmartShareServer` class in the `Server` project. The skeleton does not contain any code that connects the client to the server. The server side of the skeleton is left mostly empty and it is up to you to create a server which supports simultaneous requests as well as provides storage of files in a database. A `SmartShareContext` class has been provided with a connection string, but lacks the context definition and models needed to use Entity Framework Core in order to interact with the database.
 
-For the database, you will be given an entity relationship diagram and are expected to create a schema which matches the model when creating your `Entity` classes and context.
 
 ## Running/Testing the Client Application 
 
