@@ -65,7 +65,7 @@ The skeleton contains a basic boilerplate showcasing some of the basic features 
 
 ## Running/Testing the Client Application 
 
-In order to test and run your application, it is recommended to run commands programatically. Examples of this are inside of `Client/Program.cs`. This main method is set to run commandline arguments through a simulated `__YourMain` method. The usage of these should be self-explanatory, but if there is any confusion, please ask an instructor for clarification.
+In order to test and run your application, it is recommended to run commands programatically. Examples of this are inside of `Client/Tester.cs`. The usage of these should be self-explanatory, but if there is any confusion, please ask an instructor for clarification.
 
 ---
 
