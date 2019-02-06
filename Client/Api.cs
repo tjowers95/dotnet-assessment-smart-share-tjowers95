@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.ConstrainedExecution;
 
-namespace Client.Api
+namespace Client
 {
     public class Api
     {
