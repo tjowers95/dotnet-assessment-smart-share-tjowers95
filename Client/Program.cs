@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using Client.Verbs;
+using Client.Options;
 using CommandLine;
-using static Client.Verbs.DownloadOptions;
-using static Client.Verbs.UploadOptions;
+using static Client.Options.DownloadOptions;
+using static Client.Options.UploadOptions;
 
 namespace Client
 {
