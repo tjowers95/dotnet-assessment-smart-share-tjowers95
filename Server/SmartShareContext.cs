@@ -1,9 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
 
-namespace CsharpAssessmentSmartShare
+namespace Server
 {
     public class SmartShareContext : DbContext
     {
