@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "/Users/wmarttala/code/ft/dotnet-assessment-smart-share/Client/Client.csproj",
+  "TargetFramework": "netcoreapp2.1",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}
