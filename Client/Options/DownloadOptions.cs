@@ -1,7 +1,7 @@
 using System;
 using CommandLine;
 
-namespace Client.Verbs
+namespace Client.Options
 {
     [Verb("download", HelpText = "Downloads a file provided the correct password is given")]
     public class DownloadOptions
@@ -14,7 +14,8 @@ namespace Client.Verbs
 
         public static int ExecuteDownloadAndReturnExitCode(DownloadOptions options)
         {
-            Console.WriteLine(options.FileName);
+            // TODO
+            Console.WriteLine($"Attempting to download file: {options.FileName}");
             return 0;
         }
     }

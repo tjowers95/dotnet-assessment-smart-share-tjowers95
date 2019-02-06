@@ -3,7 +3,7 @@ using System.IO;
 using Client.Utils;
 using CommandLine;
 
-namespace Client.Verbs
+namespace Client.Options
 {
     [Verb("upload", HelpText = "Uploads a file")]
     public class UploadOptions
@@ -16,6 +16,7 @@ namespace Client.Verbs
         
         public static int ExecuteUploadAndReturnExitCode(UploadOptions options)
         {
+            // TODO
             var file = new FileInfo(options.FileName);
             Console.WriteLine($"Uploading {file.FullName}");
             Console.WriteLine($"Password: {options.Password}");

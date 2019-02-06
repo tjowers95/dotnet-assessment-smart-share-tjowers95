@@ -9,33 +9,21 @@ namespace Client
 {
     public class Program
     {
-        public static void Main()
+        private static readonly bool developmentMode = true;
+        
+        public static void Main(string[] args)
         {
-            var runCount = 1;
-            
-            // run a bunch of different commandline args through a simulated Main entry point
-            foreach (var args in new List<string[]>
+            if (args.Length <= 0 && developmentMode)
             {
-                //experiment with different command line values here
-                new[] {"download", "test.txt", "password"}, 
-                new[] {"-h"},
-                new[] {"--version"},
-                new[] {"upload"},
-                new[] {"upload", "Program.cs"},
-                new[] {"upload", "Program.cs", "password123"},
-                new[] {"download"},
-                new[] {"download", "Program.cs"},
-                new[] {"download", "Program.cs", "p@ssw0rd"},
-                new[] {"download", "Program.cs", "password123"}
-            })
+                Tester.RunTestArgs();
+            }
+            else
             {
-                Console.WriteLine("*** RUN #{0}, args: {1}", runCount++, String.Join(" ", args));
-                __YourMain(args);
-                Console.WriteLine("");
+                RunCommandArgs(args);
             }
         }
 
-        public static void __YourMain(string[] args)
+        public static void RunCommandArgs(string[] args)
         {
             Parser.Default.ParseArguments<DownloadOptions, UploadOptions>(args)
                 .MapResult(
