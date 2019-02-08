@@ -4,6 +4,7 @@ using Client.Options;
 using CommandLine;
 using static Client.Options.DownloadOptions;
 using static Client.Options.UploadOptions;
+using static Client.Options.ViewOptions;
 
 namespace Client
 {
@@ -25,10 +26,11 @@ namespace Client
 
         public static void RunCommandArgs(string[] args)
         {
-            Parser.Default.ParseArguments<DownloadOptions, UploadOptions>(args)
+            Parser.Default.ParseArguments<DownloadOptions, UploadOptions, ViewOptions>(args)
                 .MapResult(
                     (DownloadOptions opts) => ExecuteDownloadAndReturnExitCode(opts),
                     (UploadOptions opts) => ExecuteUploadAndReturnExitCode(opts),
+                    (ViewOptions opts) => ExecuteViewAndReturnExitCode(opts),
                     errs => 1);
         }
     }
