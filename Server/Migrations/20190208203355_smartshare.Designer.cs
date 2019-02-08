@@ -10,8 +10,8 @@ using Server;
 namespace Server.Migrations
 {
     [DbContext(typeof(SmartShareContext))]
-    [Migration("20190208035602_A2")]
-    partial class A2
+    [Migration("20190208203355_smartshare")]
+    partial class smartshare
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,17 +24,19 @@ namespace Server.Migrations
             modelBuilder.Entity("Server.SmartShareFile", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("id");
+
+                    b.Property<string>("Created")
+                        .HasColumnName("created");
 
                     b.Property<int>("DownloadCount")
                         .HasColumnName("download_count");
 
                     b.Property<string>("Expiration")
-                        .IsRequired()
                         .HasColumnName("expiration");
 
                     b.Property<byte[]>("FileData")
-                        .IsRequired()
                         .HasColumnName("file_data");
 
                     b.Property<string>("Filename")
@@ -45,7 +47,6 @@ namespace Server.Migrations
                         .HasColumnName("maximum_downloads");
 
                     b.Property<string>("Password")
-                        .IsRequired()
                         .HasColumnName("password");
 
                     b.HasKey("Id");
